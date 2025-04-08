@@ -1,20 +1,46 @@
-//1- Agregar a la tarjeta, el atributo "class" con el valor "card"
-let botonD= document.querySelector("#btn_datos")
-//prompt("Ingresa tu nombre")
+const btnDatos = document.querySelector("#btn-datos");
 
-//2- Agregar a la imagen, el atributo "src" con el valor "https://www.youtube.com/img/desktop/yt_1200.png"
-let logo1 = document.querySelector('#logo')
-logo1.setAttribute("src", "https://www.youtube.com/img/desktop/yt_1200.png")
+btnDatos.addEventListener("click", () => {
+    const nombre = prompt("¿Cuál es tu nombre?");
+    const anio = parseInt(prompt("¿Cuál es tu año de nacimiento?"));
+    const ciudad = prompt("¿En qué ciudad vives?");
+    const interes = prompt("¿Te interesa JavaScript? (Sí/No)");
 
-//3- Quitarle al titulo la clase que le está dando un formato feo
-let titulo = document.querySelector(".titulo-feo");
-titulo.classList.remove("titulo-feo");
+    document.querySelector('#nombre').innerHTML = "Nombre: " + nombre;
+    document.querySelector('#edad').innerHTML = "Edad: " + (2025 - anio);
+    document.querySelector('#ciudad').innerHTML = "Ciudad: " + ciudad;
+    document.querySelector('#interes').innerHTML = "Interés en JavaScript: " + interes;
+});
 
-//4- Chequear si el link a youtube posee o no el atributo href
-let link = document.querySelector("#link_youtube")
-link.hasAttribute("src")
+const btnMaterias = document.querySelector("#btn-materias");
 
-//5- Obtener el href del link a wikipedia y mostrarlo por consola
-let wiki = document.querySelector("#link_wikipedia")
-wiki.getAttribute("href")
+btnMaterias.addEventListener("click", () => {
+    document.querySelector("#materias").style.display = "flex";
+});
+
+const btnTema = document.querySelector("#btn-tema");
+
+btnTema.addEventListener("click", () => {
+    document.querySelector("body").style.backgroundColor = "black";
+    document.querySelectorAll("h2").forEach((h2) => {
+        h2.style.color = "white";  
+    });
+    document.querySelector("#titulo").style.color = "white"; 
+    document.querySelectorAll("hr").forEach((hr) => {
+        hr.style.color = "white"; 
+    });
+    document.querySelectorAll("p").forEach((p) => {
+        p.style.color = "white";  
+    });
+});
+
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "f" || event.key === "F") {
+        const informacionDiv = document.querySelector("#texto")
+        informacionDiv.innerHTML = '"Soy una persona apasionada por las áreas de tecnología y matemáticas. Me gusta explorar nuevas formas de aprender y desarrollar habilidades en programación, mientras disfruto de leer libros que me ayudan a crecer y mejorar tanto a nivel personal como profesional. Siempre estoy en busca de nuevos desafíos que me permitan expandir mis horizontes y aplicar lo aprendido de manera práctica."'
+        ;
+    }
+});
+
 

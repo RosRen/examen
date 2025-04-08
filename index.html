@@ -7,46 +7,54 @@
     <title>examen 1</title>
     <script src="js/main.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <p>(Oprime la tecla F en cualquier momento)</p>
-    <h1 id="titulo">Perfil del Developer</h1>
-    <div id="imgen">
-        <img src="/asset/img/developer.jpg" alt="imagen de developer">
+    <div class="imgen">
+        <p id="f">(Oprime la tecla F en cualquier momento)</p>
+        <h1 id="titulo">Perfil del Developer</h1>
+        <img id="developer" src="/asset/img/developer.jpg" alt="imagen de developer">
     </div>
+   
+    <div class="botones">
     <button id="btn-datos">Completar Datos</button>
     <button id="btn-materias">Obtener Materias</button>
     <button id="btn-tema">Cambiar Tema</button>
-    <div>
-        <h2>Datos ingresados</h2>
-        <h3>Nombre: </h3>
-        <h3>Edad: </h3>
-        <h3>Ciudad: </h3>
-        <h3>Interes en Javascript: </h3>
     </div>
-    <section>
+
+    <div  class="datos">
+        <h2>Datos ingresados</h2>
+        <p id="nombre">Nombre: </p>
+        <p id="edad">Edad: </p>
+        <p id="ciudad">Ciudad: </p>
+        <p id="interes">Interes en Javascript: </p>
+    </div>
+
+    <hr>
+
+    <h2>Materias de Frontend</h2>
+
+    <section id="materias">
         <div>
-            <img src="/asset/img/html-css.jpg" alt="Logo de html y css">
+            <img id="html-css" src="/asset/img/html-css.jpg" alt="Logo de html y css">
             <p>Protocolo de programación I</p>
             <p>2do semestre</p>
         </div>
         <div>
-            <img src="/asset/img/javascript.jpg" alt="Logo de Javascript">
+            <img id="js" src="/asset/img/javascript.jpg" alt="Logo de Javascript">
             <p>Protocolo de programación II</p>
             <p>3er semestre</p>
         </div>
         <div>
-            <img src="/asset/img/react.png" alt="Logo de React">
+            <img id="react" src="/asset/img/react.png" alt="Logo de React">
             <p>React</p>
             <p>4to semestre</p>
         </div>
     </section>
     <hr>
-    <h2>Materias de Frontend</h2>
-    <hr>
     <h2>Sobre mí</h2>
 
-    <div>
+    <div id="texto">
         <p>*Oprime la tecla F y visualiza el texto</p>
     </div>
     
